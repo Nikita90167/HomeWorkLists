@@ -42,8 +42,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-
-        ArrayList shoppingList = new ArrayList();
         System.out.println("Добрый день! Добро пожаловать в наш магазин!");
         while (true) {
             System.out.println();
