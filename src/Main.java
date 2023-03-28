@@ -25,8 +25,25 @@ public class Main {
                     }
                     break;
                 case 3:
-
+                    System.out.println("Список покупок:");
+                    for (int i = 0; i < shoppingList.size(); i++) {
+                        System.out.println(((i + 1) + " ") + shoppingList.get(i));
+                    }
+                    System.out.println("Какой товар хотите удалить из корзины?Введите номер или название");
+                    String productDelete = scanner.nextLine();
+                    if (productDelete.matches("[0-9]+")){
+                        int productDeleteNumber = Integer.parseInt(productDelete);
+                        shoppingList.remove(productDeleteNumber - 1);
+                } else {
+                        shoppingList.remove(productDelete);
+                    }
+                    System.out.println("Список покупок:");
+                    for (int i = 0; i < shoppingList.size(); i++) {
+                        System.out.println(((i + 1) + " ") + shoppingList.get(i));
+                    }
                     break;
+                default:
+                    System.out.println("Такой команды нет");
             }
         }
     }
